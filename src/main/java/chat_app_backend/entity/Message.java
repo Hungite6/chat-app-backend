@@ -1,5 +1,6 @@
 package chat_app_backend.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,7 +27,8 @@ public class Message {
 
     // liên kết với Room
     @ManyToOne
-    @JoinColumn(name = "room_id")
+    @JoinColumn(name = "room_id", referencedColumnName = "room_id")
+    @JsonIgnore
     private Room room;
 
     // constructor tiện dùng

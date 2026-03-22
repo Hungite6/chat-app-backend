@@ -17,6 +17,7 @@ public class Room {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "room_id")
     private String roomId;
 
     // 1 room có nhiều message

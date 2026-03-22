@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+.postman/
+postman_*.yaml
+*.postman_collection.json
