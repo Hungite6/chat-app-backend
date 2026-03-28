@@ -3,6 +3,7 @@ package chat_app_backend.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -22,5 +23,5 @@ public class Room {
 
     // 1 room có nhiều message
     @OneToMany(mappedBy = "room", cascade = CascadeType.ALL)
-    private List<Message> messages;
+    private List<Message> messages = new ArrayList<>();
 }
